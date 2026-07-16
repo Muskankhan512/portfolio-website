@@ -11,7 +11,7 @@ const projects = [
     tech: ["React", "Node.js", "Express", "MongoDB", "Groq API", "Tavily API"],
     github: "https://github.com/Muskankhan512/AskAngel",
     live: null,
-    image: null,
+    image: "/AskAngel.png",
   },
   {
     title: "Naaz Amusement",
@@ -51,7 +51,7 @@ export default function Projects() {
               className="relative grid md:grid-cols-12 items-center gap-8 group"
             >
               {/* Project Image */}
-              <div className={`md:col-span-7 ${idx % 2 !== 0 ? 'md:order-2' : ''} h-full min-h-[300px] relative rounded-lg overflow-hidden bg-panel border border-panel-border group-hover:border-primary/50 transition-colors`}>
+              <div className={`md:col-span-7 ${idx % 2 !== 0 ? 'md:order-2' : ''} h-full min-h-[300px] sm:min-h-[350px] relative rounded-lg overflow-hidden bg-panel border border-panel-border group-hover:border-primary/50 group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-300`}>
                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-20 pointer-events-none" />
                  {project.image ? (
                    <Image 
@@ -59,7 +59,7 @@ export default function Projects() {
                      alt={project.title}
                      fill
                      sizes="(max-width: 768px) 100vw, 60vw"
-                     className="object-cover object-top mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-500 z-10"
+                     className="object-cover object-center mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-500 z-10"
                    />
                  ) : (
                    <div className="w-full h-full flex items-center justify-center text-foreground/20 font-mono text-6xl z-10 relative">
