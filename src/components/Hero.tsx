@@ -3,32 +3,40 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+const roles = ["B.Tech CSE Student", "MERN Stack Developer", "Freelance Web Developer"];
+
 export default function Hero() {
-  const roles = ["B.Tech CSE Student", "MERN Stack Developer", "Freelance Web Developer"];
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    let timer: NodeJS.Timeout;
     const currentRole = roles[roleIndex];
-    const updateTyping = () => {
-      setDisplayText((prev) => {
-        if (isDeleting) return currentRole.substring(0, prev.length - 1);
-        return currentRole.substring(0, prev.length + 1);
-      });
 
-      if (!isDeleting && displayText === currentRole) {
-        setTimeout(() => setIsDeleting(true), 1500);
-      } else if (isDeleting && displayText === "") {
+    if (isDeleting) {
+      if (displayText === "") {
         setIsDeleting(false);
         setRoleIndex((prev) => (prev + 1) % roles.length);
+      } else {
+        timer = setTimeout(() => {
+          setDisplayText(currentRole.substring(0, displayText.length - 1));
+        }, 50);
       }
-    };
+    } else {
+      if (displayText === currentRole) {
+        timer = setTimeout(() => {
+          setIsDeleting(true);
+        }, 1500);
+      } else {
+        timer = setTimeout(() => {
+          setDisplayText(currentRole.substring(0, displayText.length + 1));
+        }, 100);
+      }
+    }
 
-    const typingSpeed = isDeleting ? 50 : 100;
-    const timer = setTimeout(updateTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, roleIndex, roles]);
+  }, [displayText, isDeleting, roleIndex]);
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 px-6 md:px-12">
