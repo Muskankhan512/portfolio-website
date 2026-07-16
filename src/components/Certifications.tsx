@@ -12,10 +12,7 @@ const certifications = [
     title: "Database Management Systems",
     issuer: "NPTEL, IIT Kharagpur",
   },
-  {
-    title: "Cloud Computing",
-    issuer: "NPTEL, IIT Kharagpur",
-  },
+
   {
     title: "C and C++ Programming",
     issuer: "IIT Bombay (Spoken Tutorial Project)",

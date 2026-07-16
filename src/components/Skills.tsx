@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaJava, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaLinux } from "react-icons/fa";
+import { FaJava, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaLinux, FaCode, FaDatabase, FaNetworkWired } from "react-icons/fa";
 import { SiJavascript, SiExpress, SiMongodb, SiMongoose, SiNextdotjs, SiTailwindcss, SiMysql, SiPostman } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
 
@@ -47,6 +47,15 @@ const skillCategories = [
       { name: "VS Code", icon: <TbBrandVscode /> },
       { name: "MySQL Workbench", icon: <SiMysql /> },
       { name: "Linux", icon: <FaLinux /> },
+    ],
+  },
+  {
+    title: "Core CS",
+    skills: [
+      { name: "OOP", icon: <FaCode /> },
+      { name: "DBMS", icon: <FaDatabase /> },
+      { name: "Operating Systems", icon: <FaLinux /> },
+      { name: "Computer Networks", icon: <FaNetworkWired /> },
     ],
   },
 ];

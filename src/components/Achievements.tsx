@@ -56,22 +56,7 @@ export default function Achievements() {
             </div>
           </motion.div>
 
-          <motion.div
-            whileHover={{ y: -5 }}
-            className="bg-panel border border-panel-border p-8 rounded-lg flex items-start gap-6 hover:border-secondary transition-colors"
-          >
-            <div className="text-4xl text-secondary flex-shrink-0 pt-1">
-              <FaCode />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Competitive Programming</h3>
-              <p className="text-primary font-mono text-sm mb-4">LeetCode & HackerRank</p>
-              <p className="text-foreground/80 leading-relaxed">
-                Active problem solver on major competitive programming platforms. Consistently strengthening 
-                data structures, algorithms, and logical thinking through regular practice.
-              </p>
-            </div>
-          </motion.div>
+
         </div>
       </motion.div>
     </section>
