@@ -7,17 +7,17 @@ import Image from "next/image";
 const projects = [
   {
     title: "AskAngel",
-    description: "A full-stack AI chat application allowing users to interact with conversational AI models. Features secure user authentication, conversation history tracking, and an intuitive responsive interface.",
-    tech: ["React", "Vite", "Java Spring Boot", "MongoDB Atlas"],
-    github: "#", // placeholder
+    description: "A production-grade AI chatbot with real-time streaming, JWT authentication, and LLM tool-calling. Integrated voice input, image/PDF analysis, AI image generation, and live web search. Built 12+ features including personas, bookmarks, and chat sharing with a responsive UI.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Groq API", "Tavily API"],
+    github: "https://github.com/Muskankhan512/AskAngel",
     live: null,
     image: null,
   },
   {
-    title: "Naaz Amusement Website",
-    description: "A comprehensive business website for a family amusement ride business. Features B2B event-organizer bookings, B2C online pre-ticketing, Razorpay UPI integration, location-based pricing, and a secure admin panel with a gate scan system.",
-    tech: ["Next.js", "Tailwind CSS", "Razorpay", "Admin Panel"],
-    github: null,
+    title: "Naaz Amusement",
+    description: "A full-stack ticket booking platform for a multi-city amusement business, integrating Razorpay payments with automated QR-ticket generation. Features a location-based dynamic pricing system, admin panel, and a gate-scan verification system to prevent ticket misuse.",
+    tech: ["Next.js", "React", "MongoDB", "Razorpay API", "Vercel"],
+    github: "https://github.com/Muskankhan512/naaz-amusement-website",
     live: "https://naazamusement.com",
     image: "/naaz-amusement.png",
   },
